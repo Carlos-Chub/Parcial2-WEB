@@ -17,7 +17,7 @@ class ClienteController extends Controller
     public function index()
     {
         
-        $datos['clientes'] = Cliente::paginate(1);
+        $datos['clientes'] = Cliente::paginate(2);
         //Le pasamos los datos de la consulta a la vista o template index.php
         return view('cliente.index', $datos);
     }
@@ -149,7 +149,7 @@ class ClienteController extends Controller
             $datosCliente['Foto']=$request->file('Foto')->store('uploads','public');
         }
         //Para actualizar el cliente mediante su id
-        tbproducto::where('id','=',$id)->update($datosCliente);
+        Cliente::where('id','=',$id)->update($datosCliente);
 
         //Recuperar el id
         $cliente=Cliente::findOrFail($id);

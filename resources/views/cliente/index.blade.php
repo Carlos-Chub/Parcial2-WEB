@@ -57,7 +57,7 @@
 
              <!--Objeto a para que nos lleve al formulario de editar-->
               <!--al irse a la ruta de editar se el enviar el id ($cliente->id.'/edit) al formulario editar.php-->
-            <a href="{{ url('/cliente/'.$cliente->id.'/edit') }}" class="btn btn-warning">
+            <a href="{{ url('/cliente/'.$cliente->id.'/edit') }}" class="btn btn-primary">
                 Editar
             </a>    
              |
